@@ -24,3 +24,8 @@
 
 # Ignore .env used for storing keys and access tokens
 .env
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
