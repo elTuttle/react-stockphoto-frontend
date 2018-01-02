@@ -1,0 +1,2 @@
+class CurrentImage < ApplicationRecord
+end
