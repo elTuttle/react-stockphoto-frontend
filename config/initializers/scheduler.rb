@@ -13,13 +13,13 @@ s = Rufus::Scheduler.singleton
 
 s.every '30s' do
 
-    winningCaption = Image.all.last.captions.order(votes: :desc).first.content
-    winningUser = Image.all.last.captions.order(votes: :desc).first.username
-    lastImage =   open(Image.all.last.url)
+  #winningCaption = Image.all.last.captions.order(votes: :desc).first.content
+  #winningUser = Image.all.last.captions.order(votes: :desc).first.username
+  #lastImage =   open(Image.all.last.url)
 
-    tweetString = "#{winningCaption} - @#{winningUser}"
+  #tweetString = "#{winningCaption} - @#{winningUser}"
 
-    client.update_with_media(tweetString, lastImage)
+  #client.update_with_media(tweetString, lastImage)
 
   randompage = Random.rand(100000)
   stockpageUrl = "https://www.shutterstock.com/search/Portrait?page=#{randompage}&searchterm=Portrait&language=en"
