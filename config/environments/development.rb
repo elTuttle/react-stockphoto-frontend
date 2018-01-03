@@ -31,11 +31,14 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.middleware.insert_before 0, "Rack::Cors" do
+  config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins 'localhost:3000', '127.0.0.1:3000'
-      resource '*', :headers => :any, :methods =>  [ :options ]
-    end
+        origins '*'
+        resource '*',
+                 :headers => :any,
+                 :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+                 :methods => [:get, :post, :options, :delete, :put, :patch]
+      end
   end
 
   # Print deprecation notices to the Rails logger.
