@@ -33,7 +33,7 @@ Rails.application.configure do
 
   config.middleware.insert_before 0, Rack::Cors do
     allow do
-        origins '*'
+        origins 'http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com/'
         resource '*',
                  :headers => :any,
                  :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
