@@ -38,8 +38,6 @@ gem 'nokogiri'
 
 gem 'pry'
 
-gem 'pg'
-
 gem 'whenever'
 
 gem 'rufus-scheduler'
