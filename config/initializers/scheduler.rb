@@ -14,7 +14,7 @@ s = Rufus::Scheduler.singleton
 s.every '30s' do
 
   if Image.all.last != nil
-    if Image.all.last.captions != nil
+    if Image.all.last.captions[0] != nil
       winningCaption = Image.all.last.captions.order(votes: :desc).first.content
       winningUser = Image.all.last.captions.order(votes: :desc).first.username
       lastImage =   open(Image.all.last.url)
