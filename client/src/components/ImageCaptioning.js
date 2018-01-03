@@ -36,7 +36,7 @@ class ImageCaptioning extends React.Component {
       }
       console.log(caption)
       fetch('http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com/captions', {
-        method: "POST",
+        method: "post",
         body: JSON.stringify(caption),
         headers: {
                   "Content-Type": "application/json"
@@ -102,7 +102,7 @@ class ImageCaptioning extends React.Component {
           </Center>
             <Center>
               <Form onSubmit={this.handleSubmit}>
-                <textarea id="txtArea" rows="3" cols="25" maxLength="80" value={this.state.value} onChange={this.handleChange}></textarea><br />
+                <textarea id="txtArea" rows="2" cols="50" maxLength="80" value={this.state.value} onChange={this.handleChange}></textarea><br />
 
                 <Center>
                   <Button type="submit" >Submit Caption</Button>

@@ -9,6 +9,11 @@ class CaptionsController < ApplicationController
     @caption.content = params[:content]
     @caption.votes = 0
     @caption.save
+    redirect_to caption_path(@caption)
+  end
+
+  def show
+    @caption = Caption.find(params[:id])
     render json: @caption
   end
 
