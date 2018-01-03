@@ -11,7 +11,7 @@ end
 
 s = Rufus::Scheduler.singleton
 
-s.every '30s' do
+s.every '1h' do
 
   if Image.all.last != nil
     if Image.all.last.captions.order(votes: :desc).first.content != nil
