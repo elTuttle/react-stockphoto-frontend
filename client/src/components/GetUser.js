@@ -13,7 +13,7 @@ import { newUser } from '../actions/UserActions';
 class GetUser extends React.Component {
 
   componentWillMount() {
-    fetch('http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com/current_user/' + this.props.match.params.token)
+    fetch('/current_user/' + this.props.match.params.token)
     .then(results => {
       return results.json();
     }).then(data => {
