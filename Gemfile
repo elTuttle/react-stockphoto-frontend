@@ -22,8 +22,6 @@ gem 'foreman', '~> 0.82.0'
 
 gem "paperclip", "~> 5.0.0"
 
-gem 'pg'
-
 gem 'twitter'
 
 # Use CoffeeScript for .coffee assets and views
@@ -40,6 +38,8 @@ gem 'nokogiri'
 
 gem 'pry'
 
+gem 'pg'
+
 gem 'whenever'
 
 gem 'rufus-scheduler'
@@ -47,6 +47,7 @@ gem 'rufus-scheduler'
 gem 'devise'
 
 gem 'omniauth-twitter'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

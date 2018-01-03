@@ -12,8 +12,9 @@ import { Redirect } from 'react-router'
 class LoginComponent extends React.Component {
 
   handleClick = () => {
-    window.location.href = "http://localhost:3001/auth/twitter"
+    window.location.href = "http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com/auth/twitter"
   }
+
 
   render() {
 

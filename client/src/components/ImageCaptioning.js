@@ -35,7 +35,7 @@ class ImageCaptioning extends React.Component {
         votes: 0
       }
       console.log(caption)
-      fetch('/captions', {
+      fetch('http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com/captions', {
         method: "POST",
         body: JSON.stringify(caption),
         headers: {
@@ -50,7 +50,7 @@ class ImageCaptioning extends React.Component {
   }
 
   componentWillMount() {
-    fetch("/current")
+    fetch("http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com//current")
     .then(results => {
       return results.json();
     }).then(data => {
@@ -66,7 +66,7 @@ class ImageCaptioning extends React.Component {
   }
 
   componentDidUpdate() {
-    fetch('/current_user/' + this.props.token)
+    fetch('http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com//current_user/' + this.props.token)
     .then(results => {
       return results.json();
     }).then(data => {
