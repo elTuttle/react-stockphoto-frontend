@@ -70,7 +70,7 @@ class ImageContest extends React.Component {
     }
 
     fetch('http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com/cast_vote',{
-      method: 'POST',
+      method: 'post',
       body: JSON.stringify(caption),
       headers: {
                 "Content-Type": "application/json"
