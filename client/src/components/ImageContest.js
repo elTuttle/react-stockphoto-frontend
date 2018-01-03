@@ -21,7 +21,7 @@ class ImageContest extends React.Component {
   }
 
   componentWillMount() {
-    fetch("/current")
+    fetch("http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com/current")
     .then(results => {
       return results.json();
     }).then(data => {
@@ -32,7 +32,7 @@ class ImageContest extends React.Component {
       })
       var newCaptions = this.state.captions
       var newUsers = this.state.users
-      fetch("/" + this.state.id + "/all_captions")
+      fetch("http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com/" + this.state.id + "/all_captions")
       .then(results => {
         return results.json();
       }).then(data => {
@@ -69,7 +69,7 @@ class ImageContest extends React.Component {
       img: imgText
     }
 
-    fetch('/cast_vote',{
+    fetch('http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com/cast_vote',{
       method: 'POST',
       body: JSON.stringify(caption),
       headers: {
