@@ -13,7 +13,7 @@ gem 'sqlite3'
 
 gem 'pg'
 
-gem 'rack-cors'
+gem 'rack-cors', :require => 'rack/cors'
 
 gem 'rails_12factor', '~> 0.0.3'
 # Use Puma as the app server

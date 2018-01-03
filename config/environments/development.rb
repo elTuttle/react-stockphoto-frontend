@@ -31,16 +31,6 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.middleware.insert_before 0, Rack::Cors do
-    allow do
-        origins 'http://development-stockphoto.ggd869vitp.us-west-1.elasticbeanstalk.com/'
-        resource '*',
-                 :headers => :any,
-                 :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
-                 :methods => [:get, :post, :options, :delete, :put, :patch]
-      end
-  end
-
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
