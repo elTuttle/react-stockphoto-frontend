@@ -17,7 +17,7 @@ module StockphotoContest
 
     config.action_dispatch.default_headers = {
       'Access-Control-Allow-Origin' => 'http://localhost:3000',
-      'Access-Control-Request-Method' => %w{GET POST OPTIONS}.join(",")
+      'Access-Control-Request-Method' => %w{GET POST}.join(",")
     }
 
     # Settings in config/environments/* take precedence over those specified here.
