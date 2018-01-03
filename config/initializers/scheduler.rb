@@ -13,14 +13,16 @@ s = Rufus::Scheduler.singleton
 
 s.every '30s' do
 
-  if Image.all.last.captions != nil
-    winningCaption = Image.all.last.captions.order(votes: :desc).first.content
-    winningUser = Image.all.last.captions.order(votes: :desc).first.username
-    lastImage =   open(Image.all.last.url)
+  if Image.all.last != nil
+    if Image.all.last.captions != nil
+      winningCaption = Image.all.last.captions.order(votes: :desc).first.content
+      winningUser = Image.all.last.captions.order(votes: :desc).first.username
+      lastImage =   open(Image.all.last.url)
 
-    tweetString = "#{winningCaption} - @#{winningUser}"
+      tweetString = "#{winningCaption} - @#{winningUser}"
 
-    client.update_with_media(tweetString, lastImage)
+      client.update_with_media(tweetString, lastImage)
+    end
   end
 
   randompage = Random.rand(100000)
