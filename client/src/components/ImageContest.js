@@ -77,6 +77,8 @@ class ImageContest extends React.Component {
       }
     })
 
+    event.preventDefault();
+
     event.target.disabled = true;
     sessionService.saveUser(user)
     sessionService.saveSession(user)

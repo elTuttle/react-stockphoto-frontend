@@ -25,7 +25,7 @@ class ImageCaptioning extends React.Component {
     this.setState({content: event.target.value})
   }
 
-  handleSubmit = () => {
+  handleSubmit = (event) => {
     if (this.state.content !== "") {
       const caption = {
         content: this.state.content,
@@ -41,12 +41,18 @@ class ImageCaptioning extends React.Component {
         headers: {
                   "Content-Type": "application/json"
         }
+      }).then(results => {
+        if (results.status === 200) {
+          window.location = "/imagecaptions"
+        }
       })
     } else {
       this.setState({
         error: "Cannot submit empty caption."
       })
     }
+
+    event.preventDefault();
   }
 
   componentWillMount() {

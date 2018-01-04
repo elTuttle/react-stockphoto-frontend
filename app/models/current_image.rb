@@ -1,2 +1,0 @@
-class CurrentImage < ApplicationRecord
-end
